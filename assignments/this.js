@@ -4,9 +4,9 @@
 * 1. Window/Global Object Binding - This will call the window's Object not any specific object.
 * 2. Implicit Binding - The object used before the dot is this (new.this) in when a function is called.
 * 3. New Binding - An object creator; which allows a function to return an object.
-* 4. Explicit Binding
+* 4. Explicit Binding - Constructor objects are called using .call and .apply.
 *
-* write out a code example of each explanation above
+* Write out a code example of each explanation above
 */
 
 // Principle 1
@@ -51,6 +51,8 @@
 // Principle 3
 
 // code example for New Binding
+
+
 function MeanPerson(response) {
     this.rudeGuy = 'Do not talk to me, ';
     this.response = response;
@@ -70,3 +72,5 @@ function MeanPerson(response) {
 // Principle 4
 
 // code example for Explicit Binding
+
+bob.speak.call(bob); tom.speak.apply(tom);
